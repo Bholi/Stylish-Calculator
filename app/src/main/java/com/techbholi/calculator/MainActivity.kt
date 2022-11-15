@@ -1,14 +1,14 @@
 package com.techbholi.calculator
 
 import android.annotation.SuppressLint
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.method.ScrollingMovementMethod
 import android.widget.Button
 import android.widget.TextView
-import java.lang.Exception
+import androidx.appcompat.app.AppCompatActivity
 import javax.script.ScriptEngine
 import javax.script.ScriptEngineManager
+
 
 class MainActivity : AppCompatActivity() {
     private lateinit var expression: TextView
@@ -33,7 +33,6 @@ class MainActivity : AppCompatActivity() {
     private lateinit var seven: Button
     private lateinit var eight: Button
     private lateinit var nine: Button
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -303,7 +302,7 @@ class MainActivity : AppCompatActivity() {
     @SuppressLint("SetTextI18n")
     private fun resultText() {
         val exp = expression.text.toString()
-        val engine:ScriptEngine = ScriptEngineManager().getEngineByName("rhino")
+        val engine: ScriptEngine = ScriptEngineManager().getEngineByName("rhino")
         try {
             val res= engine.eval(exp)
             if (res.toString().endsWith(".0")){
@@ -315,9 +314,8 @@ class MainActivity : AppCompatActivity() {
             expression.text = expression.text.toString()
             result.text = expression.text.toString()
         }
-
-
     }
+
 }
 
 

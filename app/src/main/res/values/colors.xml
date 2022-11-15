@@ -8,4 +8,9 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="btn">#00FFAE</color>
+
+<!--  The color Hex codes -->
+    <color name="lineColor">#DAD8D8</color>
+    <color name="btnBackground">#FFFFFF</color>
+    <color name="btnBackground2">#FF9800</color>
 </resources>
